@@ -10,24 +10,73 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      background-color: hsl(217, 54%, 11%);
+      color:white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #details{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0px 20px 0px  ;
+      margin-bottom: 20px;
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+      font-weight: 300;
+    }
+    .blue{color:hsl(215, 51%, 70%)}
+    .cyan{color: hsl(178, 100%, 50%);}
+    .white{color: white;}
+    .container{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .box{
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+    }
+    #card-img{
+      background-image: url(./images/image-equilibrium.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 250px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    #title{
+      font-size: larger;
+      font-weight: 600;
+    }
+    #subtxt{
+      padding:20px 0px;
+    }
   </style>
 </head>
 <body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="box">
+      <div id="card-img"></div>
+      <div id="title">
+        Equilibrium #3429
+      </div>
+      <div id="subtxt" class="blue">
+      Our Equilibrium collection promotes balance and calm.
+      </div>
+      <div id="details">
+        <span id="quantity" class="cyan"><img src="./images/icon-ethereum.svg" alt=""> 0.041 ETH</span>
+        <span id="days" class="blue"><img src="./images/icon-clock.svg" alt=""> 3 days left</span>
+      </div>
+      <div id="credit">
+        <img src="./images/image-avatar.png" alt="" width="16px">
+       <span class="blue"> Creation of </span>Jules Wyvern
+      </div>
+    </div>
   </div>
 </body>
 </html>
