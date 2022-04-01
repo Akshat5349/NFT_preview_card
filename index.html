@@ -41,27 +41,61 @@
       padding: 20px;
       width: 300px;
     }
+    #card{
+      height: 250px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
     #card-img{
       background-image: url(./images/image-equilibrium.jpg);
       background-position: center;
       background-size: cover;
-      height: 250px;
-      margin-bottom: 20px;
+      height: 100%;
       border-radius: 10px;
+      
+    }
+    #card-overlay{
+      background-color: hsla(178, 100%, 50%, 0.603);
+      position: relative;
+      display: none;
+      top:-250px;
+      height: 100%;
+      border-radius: 10px;
+    }
+    #card-img:hover + #card-overlay{
+      cursor:pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #card-overlay img{
+      width:30px;
+      height: 30px;
     }
     #title{
       font-size: larger;
       font-weight: 600;
     }
+    #title:hover{
+      cursor:pointer;
+      color: cyan;
+    }
     #subtxt{
       padding:20px 0px;
+    }
+    #credit-name:hover{
+      cursor: pointer;
+      color: cyan;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="box">
-      <div id="card-img"></div>
+      <div id="card">
+        <div id="card-img"></div>
+        <div id="card-overlay"><img src="./images/icon-view.svg" alt=""></div>
+      </div>
       <div id="title">
         Equilibrium #3429
       </div>
@@ -74,7 +108,7 @@
       </div>
       <div id="credit">
         <img src="./images/image-avatar.png" alt="" width="16px">
-       <span class="blue"> Creation of </span>Jules Wyvern
+       <span class="blue"> Creation of </span><span id="credit-name">Jules Wyvern</span>
       </div>
     </div>
   </div>
